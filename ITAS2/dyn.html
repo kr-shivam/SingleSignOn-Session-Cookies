@@ -1,0 +1,11 @@
+<script src="dynamic.js" language="Javascript" type="text/javascript"></script>
+<form method="POST">
+     <div id="dynamicInput">
+         <select name="Opt" id="Opt" onchange="addInput(‘dynamicInput’);">
+<option value="0" selected="selected">Please Select</option>
+<option value="1">Opt1</option>
+<option value="2">Opt2</option>
+</select>
+     </div>
+     <input type="button" value="Add another text input" onClick="addInput('dynamicInput');">
+</form>

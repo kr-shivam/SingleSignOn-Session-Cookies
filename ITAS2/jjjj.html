@@ -1,0 +1,25 @@
+<html>
+<body>
+<script>
+function dateGenerate() {
+   var date = new Date(), dateArray = new Array(), i;
+   curYear = date.getFullYear();
+    for(i = 0; i<5; i++) {
+        dateArray[i] = curYear+i;
+    }
+    return dateArray;
+}
+
+function addSelect(divname) {
+   var newDiv=document.createElement('div');
+   var html = '<select>', dates = dateGenerate(), i;
+   for(i = 0; i < dates.length; i++) {
+       html += "<option value='"+dates[i]+"'>"+dates[i]+"</option>";
+   }
+   html += '</select>';
+   newDiv.innerHTML= html;
+   document.getElementById(divname).appendChild(newDiv);
+}
+</script><div id="select-container">
+</div>
+<button id="add" onclick="addSelect('select-container');">Add Dropdown</button>
